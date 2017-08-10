@@ -18,7 +18,11 @@ module.exports = {
             'ng-jhipster',
             'ng2-webstorage',
             'rxjs',
-            'crypto-js'
+            'crypto-js',
+            'bootstrap',
+            'bootstrap/dist/css/bootstrap.css',
+            'font-awesome/css/font-awesome.min.css',
+            'primeng/resources/primeng.min.css'
         ]
     },
     resolve: {

@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'afd-studio-app',
   template: `
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Hello {{name}}</h1>
-        <p-calendar [(ngModel)]="value"></p-calendar>
-      </div>
-    </div>  
-  </div>
+  <afd-render-layout></afd-render-layout>
   `
 })
 export class AppComponent  { 

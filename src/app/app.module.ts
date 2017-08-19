@@ -1,13 +1,19 @@
 import { NgModule }      from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
-
-import { CalendarModule } from 'primeng/primeng';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule, Title } from '@angular/platform-browser'; 
 import { AppComponent }  from './app.component';
 
+import { LayoutModule } from './layout/layout.module';
+
 @NgModule({
-  imports:      [ BrowserAnimationsModule, FormsModule, CalendarModule ],
+  imports:      [ 
+      BrowserModule, 
+      FormsModule,
+      LayoutModule
+  ],
   declarations: [ AppComponent ],
+  providers: [ Title ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

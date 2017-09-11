@@ -2,7 +2,7 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         'vendor': [
-            './webapp/app/vendor',
+            './src/app/vendor',
             '@angular/common',
             '@angular/compiler',
             '@angular/core',
@@ -11,18 +11,9 @@ module.exports = {
             '@angular/platform-browser',
             '@angular/platform-browser-dynamic',
             '@angular/router',
-            '@ng-bootstrap/ng-bootstrap',
-            'angular2-cookie',
-            'angular2-infinite-scroll',
             'jquery',
-            'ng-jhipster',
-            'ng2-webstorage',
             'rxjs',
-            'crypto-js',
-            'bootstrap',
-            'bootstrap/dist/css/bootstrap.css',
-            'font-awesome/css/font-awesome.min.css',
-            'primeng/resources/primeng.min.css'
+            'primeng/primeng'
         ]
     },
     resolve: {

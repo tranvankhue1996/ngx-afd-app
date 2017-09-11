@@ -1,4 +1,15 @@
-/* after changing this file run 'yarn run webpack:build:vendor' or 'yarn install' or 'yarn run webpack:build' */
-/* tslint:disable */
+/* the third-party dependencies such as Angular, lodash, and bootstrap.css. etc */
+
+// Angular
+import '@angular/core';
+import '@angular/common';
+import '@angular/http';
+import '@angular/platform-browser';
+import '@angular/platform-browser-dynamic';
+import '@angular/router';
+
+// RxJS
+import 'rxjs';
+
+//Other vendors
 import '../content/css/vendor.css';
-import 'crypto-js/index.js';

@@ -13,7 +13,7 @@ module.exports = {
             '@angular/router',
             'jquery',
             'rxjs',
-            'primeng/primeng'
+            'bootstrap'
         ]
     },
     resolve: {

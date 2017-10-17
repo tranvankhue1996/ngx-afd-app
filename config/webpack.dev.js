@@ -38,7 +38,7 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
                 target: 'http://localhost:8080'
             }
         }, {
-            reload: false
+            reload: true
         }),
         new ExtractTextPlugin('styles.css'),
         new webpack.NoEmitOnErrorsPlugin(),

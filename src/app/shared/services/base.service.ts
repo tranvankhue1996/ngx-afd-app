@@ -4,6 +4,7 @@ import 'rxjs/add/operator/mergeMap';
 import { Injectable } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { Http, Response, Headers } from '@angular/http';
 
 @Injectable()
 export class BaseService {

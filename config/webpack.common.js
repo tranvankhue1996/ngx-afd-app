@@ -35,8 +35,8 @@ module.exports = function (options) {
                         minimize: true,
                         caseSensitive: true,
                         removeAttributeQuotes:false,
-                        minifyJS:false,
-                        minifyCSS:false
+                        minifyJS:true,
+                        minifyCSS:true
                     },
                     exclude: ['./src/index.html']
                 },

@@ -1,58 +1,73 @@
+import { Observable } from 'rxjs/Rx';
 import { HomeService } from './home.service';
-import { Component, OnInit } from '@angular/core';
-import { WebWorkerService } from 'angular2-web-worker/web-worker.service';
-
-
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'afd-render-home',
     templateUrl: './home.component.html',
-    styleUrls: [ './home.component.css' ]
+    styleUrls: [ './home.component.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class HomeComponent implements OnInit {
 
-    constructor(private homeService: HomeService, private webWorkerService: WebWorkerService) {}
+    constructor(private homeService: HomeService) {}
 
-    now: string = "loading...";
+    conversion: string = "";
+    message: string = "";
+    isDisable: boolean = false;
 
     ngOnInit() {
-        this.DoingWorker();
+        // this.conversion = [];
+        this.updateConversion.bind(this);
+        this.toggleControl.bind(this);
     }
 
-    DoingWorker() {
-        console.log('doing');
-        let i = 1;
-        let myInterval = setInterval(function() {
+    sendMessage() {
+        //send message to server
+        if(this.message && this.message.length > 0) {
+            this.homeService.sendMessage(this.message)
+                .subscribe(
+                    (success: any) => {
+                        //update my message
+                        this.updateConversion(this.message);
+                        console.log(this.message);
 
+                        //disable control
+                        this.toggleControl();
 
-            let x = Date.now();
-            console.log(x);
-            this.now = x.toString();
-            console.log('now: ', this.now);
+                        //reset input
+                        this.message = "";
 
-            i++;
-            if(i === 5) {
-                clearInterval(myInterval);
-            }
-        }, 3000);
-
-
-        let x = 1, y = 1;
-        console.log("x++ = %d, ++y = %d", x++, ++y);
+                        //update server message
+                        let loop = setInterval(()=> {
+                             this.updateConversion(success, 1);
+                             clearInterval(loop);
+                        }, 5000);
+                        
+                        this.toggleControl();
+                    },
+                    (error: any) => {
+                        console.log("cannot send message to server !");
+                    }
+                );
+        }
     }
 
-    getTime() {
-        this.homeService.getTime()
-        .subscribe(
-            (success: any) => {
-                console.log('success', success);
-                let time = new Date(success);
-                this.now = time.toUTCString();
-            },
-            (error: any) => {
-                alert('Cannot get timer from server');
-            }
-        );
+    updateConversion(message: string, type: number = 0) {
+        let HTMLclass: string = "alert alert-warning";
+        if(type === 0) {
+            HTMLclass = "message me alert alert-secondary";
+        }
+        else if(type === 1) {
+            HTMLclass = "message bot alert alert-primary";
+        }
+
+        let HTML_Message = `<div class="${HTMLclass}" role="alert">${message}</div>`;
+        this.conversion += HTML_Message;
+    }
+
+    toggleControl() {
+        this.isDisable = !this.isDisable;
     }
 }

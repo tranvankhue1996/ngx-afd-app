@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './../home/home.component';
 import { NotFoundComponent } from './notfound/notfound.component';
 import { ProductModule } from './../product/product.module';
@@ -15,6 +16,7 @@ import { ProfileModule } from './../profile/profile.module';
 
 @NgModule({
     imports: [
+        FormsModule,
         ProfileModule,
         ProductModule,
         RouterModule.forRoot(layoutRoutes, { useHash: true })

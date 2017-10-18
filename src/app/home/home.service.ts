@@ -11,13 +11,28 @@ export class HomeService {
         let headers = new Headers();
         return headers;
     }
-    
+
+    private getRequestOptions() {
+        return new RequestOptions({
+            headers: this.getHeaders()
+        });
+    }
+
     getTime() {
-        return this.http.get(Constants.HOST + Constants.TIMER.GET_NOW,new RequestOptions({headers: this.getHeaders()}))
+        return this.http.get(Constants.HOST + Constants.TIMER.GET_NOW, this.getRequestOptions())
             .map(
                 (res: Response) => {
                     return res.json();
                 }
+            );
+    }
+
+    sendMessage(message: string) {
+        return this.http.get(`${Constants.HOST}${Constants.CHATBOT.RANDOM_NUMBER}/${message}`, this.getRequestOptions())
+            .map(
+                (res: Response) => {
+                    return res.json();
+                }   
             );
     }
 

@@ -1,3 +1,4 @@
+import { ChattingModule } from './../chatting/chatting.module';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './../home/home.component';
 import { NotFoundComponent } from './notfound/notfound.component';
@@ -19,6 +20,7 @@ import { ProfileModule } from './../profile/profile.module';
         FormsModule,
         ProfileModule,
         ProductModule,
+        ChattingModule,
         RouterModule.forRoot(layoutRoutes, { useHash: true })
     ],
     declarations: [ 

@@ -17,14 +17,14 @@ eval("exports = module.exports = __webpack_require__(4)(undefined);\n// imports\
 /***/ "./src/content/css/global.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = __webpack_require__(\"./node_modules/css-loader/index.js!./src/content/css/global.css\");\nif(typeof content === 'string') content = [[module.i, content, '']];\n// add the styles to the DOM\nvar update = __webpack_require__(12)(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(true) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"./node_modules/css-loader/index.js!./src/content/css/global.css\", function() {\n\t\t\tvar newContent = __webpack_require__(\"./node_modules/css-loader/index.js!./src/content/css/global.css\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.i, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/content/css/global.css\n// module id = ./src/content/css/global.css\n// module chunks = 2\n\n//# sourceURL=webpack:///./src/content/css/global.css?");
+eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = __webpack_require__(\"./node_modules/css-loader/index.js!./src/content/css/global.css\");\nif(typeof content === 'string') content = [[module.i, content, '']];\n// add the styles to the DOM\nvar update = __webpack_require__(13)(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(true) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"./node_modules/css-loader/index.js!./src/content/css/global.css\", function() {\n\t\t\tvar newContent = __webpack_require__(\"./node_modules/css-loader/index.js!./src/content/css/global.css\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.i, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/content/css/global.css\n// module id = ./src/content/css/global.css\n// module chunks = 2\n\n//# sourceURL=webpack:///./src/content/css/global.css?");
 
 /***/ }),
 
-/***/ 12:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = (__webpack_require__(3))(441);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/style-loader/addStyles.js from dll-reference vendor\n// module id = 12\n// module chunks = 2\n\n//# sourceURL=webpack:///delegated_./node_modules/style-loader/addStyles.js_from_dll-reference_vendor?");
+eval("module.exports = (__webpack_require__(3))(441);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/style-loader/addStyles.js from dll-reference vendor\n// module id = 13\n// module chunks = 2\n\n//# sourceURL=webpack:///delegated_./node_modules/style-loader/addStyles.js_from_dll-reference_vendor?");
 
 /***/ }),
 

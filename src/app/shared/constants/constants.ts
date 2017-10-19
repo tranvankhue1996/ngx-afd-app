@@ -3,7 +3,5 @@ export const Constants = {
     TIMER: {
         GET_NOW: "timer",
     },
-    CHATBOT: {
-        RANDOM_NUMBER: "chatbot/randomnumber"
-    }
+    CHATBOT: "chatbot"
 }

@@ -3,4 +3,6 @@ node_modules
 dist
 jspm_packages
 npm-debug.log
-
+dist/manifest.bundle.js
+dist/global.bundle.js
+dist/main.bundle.js

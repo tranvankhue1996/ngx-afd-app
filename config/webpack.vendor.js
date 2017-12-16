@@ -24,7 +24,7 @@ module.exports = {
         exprContextCritical: false,
         rules: [
             {
-                test: /(vendor\.css|global\.css)/,
+                test: /\.css$/,
                 loaders: ['style-loader', 'css-loader']
             },
             {

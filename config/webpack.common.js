@@ -86,6 +86,12 @@ module.exports = function (options) {
             new CopyWebpackPlugin([
                 { from: './src/favicon.ico', to: 'favicon.ico' }
             ]),
+            new CopyWebpackPlugin([
+                { 
+                    from: './src/content/i18n', 
+                    to: 'i18n' 
+                }
+            ]),
             new webpack.ProvidePlugin({
                 $: "jquery",
                 jQuery: "jquery"
@@ -97,13 +103,7 @@ module.exports = function (options) {
             }),
             new AddAssetHtmlPlugin([
                 { filepath: path.resolve('./dist/vendor.dll.js'), includeSourcemap: false }
-            ]),
-            new CopyWebpackPlugin([
-                { 
-                    from: './src/content/i18n', 
-                    to: 'i18n' 
-                }
-            ]),
+            ])
         ]
     };
 };

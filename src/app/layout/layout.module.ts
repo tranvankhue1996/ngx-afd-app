@@ -9,6 +9,7 @@ import { BaseService } from './../shared/services/base.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import {
     LayoutComponent,
@@ -16,16 +17,18 @@ import {
 } from './index';
 
 import { ProfileModule } from './../profile/profile.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
         FormsModule,
         HttpModule,
+        CommonModule,
         SharedModule,
+        RouterModule.forRoot(layoutRoutes, { useHash: true }),
         ProfileModule,
         ProductModule,
-        ChattingModule,
-        RouterModule.forRoot(layoutRoutes, { useHash: true })
+        ChattingModule
     ],
     declarations: [
         LayoutComponent,
@@ -33,7 +36,10 @@ import { ProfileModule } from './../profile/profile.module';
         NavbarComponent,
         NotFoundComponent
     ],
-    providers: [ BaseService ],
+    providers: [
+        Title,
+        BaseService
+    ],
     exports: [ LayoutComponent ]
 })
 

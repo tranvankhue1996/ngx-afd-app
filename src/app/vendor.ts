@@ -11,5 +11,5 @@ import '@angular/router';
 // RxJS
 import 'rxjs';
 
-//Other vendors
+// css
 import '../content/css/vendor.css';

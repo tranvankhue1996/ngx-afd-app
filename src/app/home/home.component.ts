@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs/Rx';
 import { Component, ViewEncapsulation } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'afd-render-home',
@@ -10,5 +10,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 export class HomeComponent {
 
-    constructor() {}
+    constructor(private translate: TranslateService) {
+        translate.addLangs(['en', 'vi']);
+        translate.setDefaultLang('en');
+
+        let browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/en|vi/) ? browserLang : 'en');
+        console.log('constructor home');
+    }
 }

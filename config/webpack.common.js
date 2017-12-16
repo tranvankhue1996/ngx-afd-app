@@ -98,7 +98,12 @@ module.exports = function (options) {
             new AddAssetHtmlPlugin([
                 { filepath: path.resolve('./dist/vendor.dll.js'), includeSourcemap: false }
             ]),
-            new StringReplacePlugin()
+            new CopyWebpackPlugin([
+                { 
+                    from: './src/content/i18n', 
+                    to: 'i18n' 
+                }
+            ]),
         ]
     };
 };

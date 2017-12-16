@@ -4,7 +4,6 @@ import 'rxjs/add/operator/mergeMap';
 import { Injectable } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { Http, Response, Headers } from '@angular/http';
 
 @Injectable()
 export class BaseService {
@@ -13,7 +12,7 @@ export class BaseService {
       private titleService: Title) {}
 
     setTitle() {
-        //set title
+        // set title
         this.router.events
             .filter((event) => event instanceof NavigationEnd)
             .map(() => this.activatedRoute)

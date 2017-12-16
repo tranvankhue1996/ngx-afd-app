@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'afd-studio-app',
+  selector: 'afd-marketplace',
   template: `
-  <afd-render-layout></afd-render-layout>
+  <afd-layout></afd-layout>
   `
 })
 export class AppComponent  { 

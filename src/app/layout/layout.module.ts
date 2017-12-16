@@ -1,3 +1,4 @@
+import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from './../shared/shared.module';
 import { HttpModule } from '@angular/http';
 import { ChattingModule } from './../chatting/chatting.module';
@@ -34,7 +35,8 @@ import { CommonModule } from '@angular/common';
         LayoutComponent,
         HomeComponent,
         NavbarComponent,
-        NotFoundComponent
+        FooterComponent,
+        NotFoundComponent,
     ],
     providers: [
         Title,

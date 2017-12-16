@@ -1,6 +1,6 @@
-<!-- navbar render -->
-<afd-render-navbar></afd-render-navbar> 
-<div class="container-fluid">  
+<afd-navbar></afd-navbar> 
+<div class="container-fluid" [style.height.px]="heightBody" #body>  
   <router-outlet></router-outlet>
   <!-- Routed views go here -->
 </div>
+<afd-footer></afd-footer> 

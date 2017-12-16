@@ -679,13 +679,6 @@ eval("module.exports = vendor;\n\n//////////////////\n// WEBPACK FOOTER\n// exte
 
 /***/ }),
 
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = (__webpack_require__(1))(108);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/css-loader/lib/css-base.js from dll-reference vendor\n// module id = 10\n// module chunks = 1\n\n//# sourceURL=webpack:///delegated_./node_modules/css-loader/lib/css-base.js_from_dll-reference_vendor?");
-
-/***/ }),
-
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -704,6 +697,13 @@ eval("module.exports = (__webpack_require__(1))(177);\n\n//////////////////\n// 
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("__webpack_require__(\"./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080\");\n__webpack_require__(\"./node_modules/webpack/hot/dev-server.js\");\nmodule.exports = __webpack_require__(\"./src/app/polyfills.ts\");\n\n\n//////////////////\n// WEBPACK FOOTER\n// multi (webpack)-dev-server/client?http://localhost:8080 webpack/hot/dev-server ./src/app/polyfills\n// module id = 56\n// module chunks = 1\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = (__webpack_require__(1))(108);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/css-loader/lib/css-base.js from dll-reference vendor\n// module id = 8\n// module chunks = 1\n\n//# sourceURL=webpack:///delegated_./node_modules/css-loader/lib/css-base.js_from_dll-reference_vendor?");
 
 /***/ })
 

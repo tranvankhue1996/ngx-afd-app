@@ -34,15 +34,36 @@ module.exports = function (options) {
                     options: {
                         minimize: true,
                         caseSensitive: true,
-                        removeAttributeQuotes:false,
-                        minifyJS:true,
-                        minifyCSS:true
+                        removeAttributeQuotes: false,
+                        minifyJS: true,
+                        minifyCSS: true
                     },
                     exclude: ['./src/index.html']
                 },
                 {
-                    test: /\.css$/,
+                    test: /\.(css)$/,
                     loaders: ['to-string-loader', 'css-loader'],
+                    exclude: /(vendor\.css|global\.css)/
+                },
+                {
+                    test: /\.(scss)$/,
+                    use: [{
+                        loader: 'style-loader', // inject CSS to page
+                    }, {
+                        loader: 'css-loader', // translates CSS into CommonJS modules
+                    }, {
+                        loader: 'postcss-loader', // Run post css actions
+                        options: {
+                            plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    }, {
+                        loader: 'sass-loader' // compiles SASS to CSS
+                    }],
                     exclude: /(vendor\.css|global\.css)/
                 },
                 {
@@ -57,17 +78,17 @@ module.exports = function (options) {
                             loader: 'image-webpack-loader',
                             query: {
                                 mozjpeg: {
-                                  progressive: true,
+                                    progressive: true,
                                 },
                                 gifsicle: {
-                                  interlaced: false,
+                                    interlaced: false,
                                 },
                                 optipng: {
-                                  optimizationLevel: 7,
+                                    optimizationLevel: 7,
                                 },
                                 pngquant: {
-                                  quality: '75-90',
-                                  speed: 3,
+                                    quality: '75-90',
+                                    speed: 3,
                                 },
                             }
                         }
@@ -87,14 +108,16 @@ module.exports = function (options) {
                 { from: './src/favicon.ico', to: 'favicon.ico' }
             ]),
             new CopyWebpackPlugin([
-                { 
-                    from: './src/content/i18n', 
-                    to: 'i18n' 
+                {
+                    from: './src/content/i18n',
+                    to: 'i18n'
                 }
             ]),
             new webpack.ProvidePlugin({
                 $: "jquery",
-                jQuery: "jquery"
+                jQuery: "jquery",
+                'window.jQuery': 'jquery',
+                Popper: ['popper.js', 'default']
             }),
             new HtmlWebpackPlugin({
                 template: './src/index.html',

@@ -2,4 +2,5 @@
 * VENDOR CSS
 */
 
+@import "~bootstrap/dist/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";

@@ -10,8 +10,6 @@ import * as $ from 'jquery';
 })
 
 export class LayoutComponent implements OnInit { 
-  @ViewChild('body') vcBody: any;
-  heightBody: number = 100;
 
   constructor(private baseService: BaseService,
     private translate: TranslateService) {
@@ -28,26 +26,14 @@ export class LayoutComponent implements OnInit {
     //set default service
     this.baseService.setTitle();
 
-    this.updateBodyHeight();
-
     //loading content
     $(window).on('load', function() {
       $('.loader').fadeOut('slow');
     });
   }
 
-  updateBodyHeight() {
-    let H = this.vcBody.nativeElement.clientHeight || 100;
-    // get browser Height
-    let wh = window.innerHeight || 0;
-    if((wh - 106) > 0) {
-      this.heightBody = wh - 106;
-    }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  resizeHeight() {
-    console.log('abc');
-    this.updateBodyHeight();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // resizeHeight() {
+  //   console.log('abc');
+  // }
 }

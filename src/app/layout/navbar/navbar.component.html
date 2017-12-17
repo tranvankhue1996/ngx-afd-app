@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand flex-column flex-md-row navbar-dark bg-primary" [class.dock-top]="isFixedTop">
   <div class="container">
     <a class="navbar-brand" href="#">
       <mat-icon>archive</mat-icon>
@@ -16,13 +16,10 @@
             <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/chatting" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Chatting</a>
+            <a class="nav-link" routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Product</a>
+            <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
           </li>
         </ul>
       </div>

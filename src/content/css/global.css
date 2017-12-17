@@ -4,3 +4,11 @@
 
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+ul li {
+    list-style-type: none;
+}
+
+button:focus {
+    outline: none;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'afd-navbar',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: [ './navbar.component.css' ]
 })
 
-export class NavbarComponent {}
+export class NavbarComponent {
+    @Input() isFixedTop: boolean = false;
+}

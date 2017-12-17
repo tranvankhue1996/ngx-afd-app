@@ -35,6 +35,9 @@ import {
     MatStepperModule
 } from '@angular/material';
 
+import { CardComponent, JumbotronComponent } from '../layout';
+import { ModuleWithProviders } from "@angular/compiler/src/core";
+
 @NgModule({
     imports: [
         // material.angular.io
@@ -70,7 +73,13 @@ import {
         MatTooltipModule,
         MatStepperModule
     ],
+    declarations: [
+        JumbotronComponent,
+        CardComponent
+    ],
     exports: [
+        JumbotronComponent,
+        CardComponent,
         TranslateModule,
         // material.angular.io
         MatAutocompleteModule,

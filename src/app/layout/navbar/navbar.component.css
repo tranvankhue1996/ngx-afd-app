@@ -12,3 +12,10 @@
     border-radius: 15px 0;
     transition: .35s;
 }
+
+.dock-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+}

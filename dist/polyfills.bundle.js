@@ -700,10 +700,10 @@ eval("__webpack_require__(\"./node_modules/webpack-dev-server/client/index.js?ht
 
 /***/ }),
 
-/***/ 8:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = (__webpack_require__(1))(108);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/css-loader/lib/css-base.js from dll-reference vendor\n// module id = 8\n// module chunks = 1\n\n//# sourceURL=webpack:///delegated_./node_modules/css-loader/lib/css-base.js_from_dll-reference_vendor?");
+eval("module.exports = (__webpack_require__(1))(108);\n\n//////////////////\n// WEBPACK FOOTER\n// delegated ./node_modules/css-loader/lib/css-base.js from dll-reference vendor\n// module id = 6\n// module chunks = 1\n\n//# sourceURL=webpack:///delegated_./node_modules/css-loader/lib/css-base.js_from_dll-reference_vendor?");
 
 /***/ })
 

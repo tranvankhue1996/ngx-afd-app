@@ -36,7 +36,6 @@ import {
 } from '@angular/material';
 
 import { CardComponent, JumbotronComponent } from '../layout';
-import { ModuleWithProviders } from "@angular/compiler/src/core";
 
 @NgModule({
     imports: [

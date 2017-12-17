@@ -1,24 +1,11 @@
-<!-- <div class="card" [class.text-center]="isTextCenter">
-    <img class="card-img-top" [src]="imgLink">
-    <div class="card-body">
-        <h4 class="card-title">{{title}}</h4>
-        <p class="card-text">{{type}}</p>
-    </div>
-    <div class="card-footer">
-        <small class="text-muted">{{views}} {{strViews}}</small>
-    </div>
-</div> -->
-
-<mat-card class="card" [class.text-center]="isTextCenter">
-        <img mat-card-image [src]="imgLink">
-        <mat-card-content>
-            <h4 class="card-title">{{title}}</h4>
-            <p class="card-text">{{type}}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-icon-button color="warn">
-               <mat-icon>favorite</mat-icon>
-          </button>
-          <button mat-button color="Accent">SHARE</button>
-        </mat-card-actions>
-      </mat-card>
+<mat-card class="card">
+    <mat-card-header>
+        <img mat-card-avatar [src]="model?.imgLink">
+        <mat-card-title>{{model?.title}}</mat-card-title>
+        <mat-card-subtitle>{{model?.type}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="optional-bar row justify-content-center">
+        <button mat-raised-button color="primary">View</button>
+        <button mat-raised-button color="accent">Github</button>
+    </mat-card-actions>
+</mat-card>

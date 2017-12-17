@@ -3,7 +3,14 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
-.card img {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+.optional-bar {
+    border-top: 1px solid silver;
+}
+
+.mat-card-avatar {
+    background: silver;
+}
+
+.mat-card-title {
+    margin-bottom: 10px;
 }

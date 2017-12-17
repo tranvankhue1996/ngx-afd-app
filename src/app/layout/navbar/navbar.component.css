@@ -7,9 +7,13 @@
     vertical-align: middle;
 }
 
+.nav-item {
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+}
+
 .nav-item .active {
     background: rgba(255,255,255,.15);
-    border-radius: 15px 0;
     transition: .35s;
 }
 
@@ -18,4 +22,16 @@
     position: sticky;
     top: 0;
     z-index: 1071;
+}
+
+#navbarToggler02 .navbar-nav li a.active {
+    background:rgba(255,255,255,.15);
+}
+
+.mat-button {
+    min-width: inherit!important;
+    line-height: inherit!important;
+    font-family: inherit!important;
+    font-size: inherit!important;
+    font-weight: inherit!important;
 }

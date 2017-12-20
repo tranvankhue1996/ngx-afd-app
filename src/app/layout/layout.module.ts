@@ -23,9 +23,7 @@ import { SharedModule } from '../shared/shared.module';
         FormsModule,
         HttpModule,
         SharedModule,
-        RouterModule.forRoot(layoutRoutes, { useHash: true }),
-        AboutModule,
-        ProductModule
+        RouterModule.forRoot(layoutRoutes, { useHash: true })
     ],
     declarations: [
         LayoutComponent,

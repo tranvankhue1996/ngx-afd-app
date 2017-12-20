@@ -10,11 +10,11 @@ module.exports = function (options) {
     return {
         entry: {
             'polyfills': './src/app/polyfills',
-            'global': './src/content/css/global.scss',
+            'global': './src/content/css/global.css',
             'main': './src/main'
         },
         resolve: {
-            extensions: ['.ts', '.js'],
+            extensions: ['.js', '.ts'],
             modules: ['node_modules']
         },
         module: {
@@ -23,8 +23,9 @@ module.exports = function (options) {
                 {
                     test: /\.ts$/,
                     loaders: [
+                        'awesome-typescript-loader',
                         'angular2-template-loader',
-                        'awesome-typescript-loader'
+                        'angular2-router-loader'
                     ],
                     exclude: ['node_modules/generator-jhipster']
                 },
@@ -42,12 +43,12 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.(vendor\.scss|global\.scss|sass|scss)$/,
-                    loaders: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader'],
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
                     exclude: /(vendor\.css|global\.css)/
                 },
                 {
                     test: /(vendor\.css|global\.css)/,
-                    loaders: ['style-loader', 'css-loader?sourceMap']
+                    loaders: ['style-loader', 'css-loader']
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot)$/i,

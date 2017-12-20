@@ -22,6 +22,7 @@
     "@ngx-translate/core": "^9.0.2",
     "@ngx-translate/http-loader": "^2.0.0",
     "angular-in-memory-web-api": "~0.3.0",
+    "angular2-router-loader": "^0.3.5",
     "bootstrap": "^4.0.0-beta",
     "core-js": "2.5.1",
     "es6-shim": "^0.35.3",

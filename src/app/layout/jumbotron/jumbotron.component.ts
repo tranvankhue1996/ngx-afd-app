@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
     selector: 'afd-jumbotron',
     templateUrl: './jumbotron.component.html',
-    styleUrls: [ './jumbotron.component.css' ]
+    styleUrls: [ './jumbotron.component.scss' ]
 })
 
 export class JumbotronComponent {

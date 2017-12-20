@@ -693,10 +693,10 @@ eval("module.exports = (__webpack_require__(1))(177);\n\n//////////////////\n// 
 
 /***/ }),
 
-/***/ 56:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(\"./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080\");\n__webpack_require__(\"./node_modules/webpack/hot/dev-server.js\");\nmodule.exports = __webpack_require__(\"./src/app/polyfills.ts\");\n\n\n//////////////////\n// WEBPACK FOOTER\n// multi (webpack)-dev-server/client?http://localhost:8080 webpack/hot/dev-server ./src/app/polyfills\n// module id = 56\n// module chunks = 1\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(\"./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080\");\n__webpack_require__(\"./node_modules/webpack/hot/dev-server.js\");\nmodule.exports = __webpack_require__(\"./src/app/polyfills.ts\");\n\n\n//////////////////\n// WEBPACK FOOTER\n// multi (webpack)-dev-server/client?http://localhost:8080 webpack/hot/dev-server ./src/app/polyfills\n// module id = 55\n// module chunks = 1\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ }),
 
@@ -707,4 +707,4 @@ eval("module.exports = (__webpack_require__(1))(108);\n\n//////////////////\n// 
 
 /***/ })
 
-},[56]);
+},[55]);

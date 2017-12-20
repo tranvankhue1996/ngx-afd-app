@@ -10,7 +10,7 @@ module.exports = function (options) {
     return {
         entry: {
             'polyfills': './src/app/polyfills',
-            'global': './src/content/css/global.css',
+            'global': './src/content/css/global.scss',
             'main': './src/main'
         },
         resolve: {
@@ -41,34 +41,13 @@ module.exports = function (options) {
                     exclude: ['./src/index.html']
                 },
                 {
-                    test: /\.(css)$/,
-                    loaders: ['to-string-loader', 'css-loader'],
-                    exclude: /(vendor\.css|global\.css)/
-                },
-                {
-                    test: /\.(scss)$/,
-                    use: [{
-                        loader: 'style-loader', // inject CSS to page
-                    }, {
-                        loader: 'css-loader', // translates CSS into CommonJS modules
-                    }, {
-                        loader: 'postcss-loader', // Run post css actions
-                        options: {
-                            plugins: function () { // post css plugins, can be exported to postcss.config.js
-                                return [
-                                    require('precss'),
-                                    require('autoprefixer')
-                                ];
-                            }
-                        }
-                    }, {
-                        loader: 'sass-loader' // compiles SASS to CSS
-                    }],
+                    test: /\.(vendor\.scss|global\.scss|sass|scss)$/,
+                    loaders: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader'],
                     exclude: /(vendor\.css|global\.css)/
                 },
                 {
                     test: /(vendor\.css|global\.css)/,
-                    loaders: ['style-loader', 'css-loader']
+                    loaders: ['style-loader', 'css-loader?sourceMap']
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot)$/i,

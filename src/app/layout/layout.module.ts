@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import {
-    LayoutComponent,
+    MainComponent,
     layoutRoutes,
     NavbarComponent,
     NotFoundComponent,
@@ -28,7 +28,7 @@ import { SharedModule } from '../shared/shared.module';
         ProductModule
     ],
     declarations: [
-        LayoutComponent,
+        MainComponent,
         HomeComponent,
         NavbarComponent,
         FooterComponent,
@@ -39,7 +39,7 @@ import { SharedModule } from '../shared/shared.module';
         BaseService
     ],
     exports: [
-        LayoutComponent
+        MainComponent
     ]
 })
 

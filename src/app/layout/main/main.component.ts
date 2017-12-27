@@ -1,15 +1,15 @@
 import { TranslateService } from '@ngx-translate/core';
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BaseService } from './../shared/services/base.service';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'afd-layout',
+  selector: 'afd-main',
   templateUrl: './layout.component.html',
   styleUrls: [ './layout.component.css' ]
 })
 
-export class LayoutComponent implements OnInit { 
+export class MainComponent implements OnInit { 
 
   constructor(private baseService: BaseService,
     private translate: TranslateService) {

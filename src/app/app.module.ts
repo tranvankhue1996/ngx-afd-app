@@ -2,9 +2,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { MainComponent } from './layout/main/main.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'i18n/', '.json');
@@ -23,7 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     LayoutModule
   ],
-  declarations: [ AppComponent ],
-  bootstrap: [AppComponent]
+  declarations: [ MainComponent ],
+  bootstrap: [ MainComponent ]
 })
 export class AppModule { }

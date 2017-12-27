@@ -1,37 +1,54 @@
-.navbar {
+nav.navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    color: #fff;
+    background-color: #3bd040;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-}
 
-.mat-icon {
-    font-size: 1.25rem;
-    vertical-align: middle;
-}
+    .dock-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1071;
+    }
 
-.nav-item {
-    transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-}
+    .app-logo {
+        display: inline-flex;
 
-.nav-item .active {
-    background: rgba(255,255,255,.15);
-    transition: .35s;
-}
+        .logo {
+            width: 120px;
 
-.dock-top {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1071;
-}
+            .nav-link {
+                padding: 0;
+            }
+        }
+    }
 
-#navbarToggler02 .navbar-nav li a.active {
-    background:rgba(255,255,255,.15);
-}
+    .nav-right {
+        flex-grow: 1;
+        flex-direction: row-reverse !important;
 
-.mat-button {
-    min-width: inherit!important;
-    line-height: inherit!important;
-    font-family: inherit!important;
-    font-size: inherit!important;
-    font-weight: inherit!important;
+        .nav-item {
+            border-radius: 50%;
+
+            // .active {
+            //     background: rgba(255,255,255,.15);
+            //     transition: .35s;
+            // }
+        }
+    }
+
+    //other
+    .mat-icon {
+        font-size: 1.25rem;
+        vertical-align: middle;
+    }
+
+    .mat-button {
+        min-width: inherit!important;
+        line-height: inherit!important;
+        font-family: inherit!important;
+        font-size: inherit!important;
+        font-weight: inherit!important;
+    }
 }

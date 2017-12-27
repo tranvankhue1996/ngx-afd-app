@@ -1,12 +1,12 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
-import { BaseService } from './../shared/services/base.service';
+import { BaseService } from './../../shared/services/base.service';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'afd-main',
-  templateUrl: './layout.component.html',
-  styleUrls: [ './layout.component.scss' ]
+  templateUrl: './main.component.html',
+  styleUrls: [ './main.component.scss' ]
 })
 
 export class MainComponent implements OnInit { 
@@ -23,17 +23,12 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-    //set default service
+    // set default service
     this.baseService.setTitle();
 
-    //loading content
+    // loading content
     $(window).on('load', function() {
       $('.loader').fadeOut('slow');
     });
   }
-
-  // @HostListener('window:resize', ['$event'])
-  // resizeHeight() {
-  //   console.log('abc');
-  // }
 }

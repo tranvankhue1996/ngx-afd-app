@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LayoutModule } from './layout/layout.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { MainComponent } from './layout/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'i18n/', '.json');
 }
@@ -24,7 +24,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     LayoutModule
   ],
-  declarations: [ MainComponent ],
-  bootstrap: [ MainComponent ]
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -14,7 +14,7 @@ module.exports = function (options) {
             'main': './src/main'
         },
         resolve: {
-            extensions: ['.ts', '.js'],
+            extensions: ['.js', '.ts'],
             modules: ['node_modules']
         },
         module: {
@@ -23,8 +23,9 @@ module.exports = function (options) {
                 {
                     test: /\.ts$/,
                     loaders: [
+                        'awesome-typescript-loader',
                         'angular2-template-loader',
-                        'awesome-typescript-loader'
+                        'angular2-router-loader'
                     ],
                     exclude: ['node_modules/generator-jhipster']
                 },
@@ -41,29 +42,8 @@ module.exports = function (options) {
                     exclude: ['./src/index.html']
                 },
                 {
-                    test: /\.(css)$/,
-                    loaders: ['to-string-loader', 'css-loader'],
-                    exclude: /(vendor\.css|global\.css)/
-                },
-                {
-                    test: /\.(scss)$/,
-                    use: [{
-                        loader: 'style-loader', // inject CSS to page
-                    }, {
-                        loader: 'css-loader', // translates CSS into CommonJS modules
-                    }, {
-                        loader: 'postcss-loader', // Run post css actions
-                        options: {
-                            plugins: function () { // post css plugins, can be exported to postcss.config.js
-                                return [
-                                    require('precss'),
-                                    require('autoprefixer')
-                                ];
-                            }
-                        }
-                    }, {
-                        loader: 'sass-loader' // compiles SASS to CSS
-                    }],
+                    test: /\.(vendor\.scss|global\.scss|sass|scss)$/,
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
                     exclude: /(vendor\.css|global\.css)/
                 },
                 {

@@ -12,4 +12,4 @@ import '@angular/router';
 import 'rxjs';
 
 // css
-import '../content/css/vendor.css';
+import '../content/css/vendor.scss';

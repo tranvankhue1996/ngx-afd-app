@@ -11,6 +11,14 @@ export const layoutRoutes: Routes = [
         }
     },
     {
+        path: 'products',
+        loadChildren: '../product/product.module#ProductModule'
+    },
+    {
+        path: 'about',
+        loadChildren: '../about/about.module#AboutModule?sync=true'
+    },
+    {
         path: '**',
         component: NotFoundComponent,
         data: {

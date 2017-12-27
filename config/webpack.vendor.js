@@ -24,8 +24,8 @@ module.exports = {
         exprContextCritical: false,
         rules: [
             {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
+                test: /(vendor\.css|global\.css)/,
+                loaders: ['style-loader', 'css-loader?sourceMap']
             },
             {
                 test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot)$/i,

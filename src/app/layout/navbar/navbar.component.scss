@@ -1,41 +1,45 @@
 nav.navbar {
+    z-index: 1071;
     display: flex !important;
     flex-direction: row !important;
     color: #fff;
-    background-color: #3bd040;
+    background-color: #004D40;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-
-    .dock-top {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 1071;
-    }
 
     .app-logo {
         display: inline-flex;
 
         .logo {
             width: 120px;
+            margin-left: 10px;
 
-            .nav-link {
-                padding: 0;
+            a {
+                height: 100%;
+                width: 100%;
+                display: grid;
+            }
+
+            .img-logo {
+                background: url('./../../../content/images/logo.svg') center no-repeat;
+                background-size: 80%;
             }
         }
     }
 
+    .nav-item {
+        border-radius: 50%;
+        color: #26A69A;
+
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    
     .nav-right {
         flex-grow: 1;
-        flex-direction: row-reverse !important;
-
-        .nav-item {
-            border-radius: 50%;
-
-            // .active {
-            //     background: rgba(255,255,255,.15);
-            //     transition: .35s;
-            // }
-        }
+        justify-content: flex-end;
     }
 
     //other

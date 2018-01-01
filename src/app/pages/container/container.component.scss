@@ -6,5 +6,7 @@
 
 .body {
     flex-grow: 1;
-    background-color: #e4e1e1;
+    background-color: #fff;
+    transition: all .6s;
+    -webkit-transition: all .6s;
 }

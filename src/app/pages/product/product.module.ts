@@ -1,11 +1,11 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { 
+import {
     ProductComponent,
     routesProduct
 } from './index';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
     imports: [

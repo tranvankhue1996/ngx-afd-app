@@ -1,0 +1,9 @@
+.sidebar {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    z-index: 101;
+    background-color: #e4e1e1;
+    transition: all .6s;
+    -webkit-transition: all .6s;
+}

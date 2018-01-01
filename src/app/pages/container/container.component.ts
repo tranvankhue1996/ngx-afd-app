@@ -4,12 +4,19 @@ import { BaseService } from './../../shared/services/base.service';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'afd-main',
-  templateUrl: './main.component.html',
-  styleUrls: [ './main.component.scss' ]
+  selector: 'afd-container',
+  templateUrl: './container.component.html',
+  styleUrls: [ './container.component.scss' ]
 })
 
-export class MainComponent implements OnInit { 
+export class ContainerComponent implements OnInit {
+
+  config: any = {
+    sidebar: {
+      width: '18%',
+      isExpanded: true
+    }
+  };
 
   constructor(private baseService: BaseService,
     private translate: TranslateService) {
@@ -30,5 +37,9 @@ export class MainComponent implements OnInit {
     $(window).on('load', function() {
       $('.loader').fadeOut('slow');
     });
+  }
+
+  controlSidebar() {
+    this.config.sidebar.isExpanded = !this.config.sidebar.isExpanded;
   }
 }

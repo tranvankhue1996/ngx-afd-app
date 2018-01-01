@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'afd-navbar',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NavbarComponent {
-    @Input() isFixedTop: boolean = false;
-    selected: any;
+    @Input() isFixedTop: Boolean = false;
+    @Output() onChangeSidebar: EventEmitter<any> = new EventEmitter<any>();
+
+    changeSidebar() {
+        // change collapse or expand
+        this.onChangeSidebar.emit(true);
+    }
 }

@@ -1,11 +1,5 @@
-import { NgModule } from "@angular/core";
-import { TranslateModule } from "@ngx-translate/core";
-
-import { AccordionModule } from 'primeng/components/accordion/accordion';
-
-// const PRIMENG_DEPENDENCIES = [
-    
-// ];
+import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import {
     MatAutocompleteModule,
@@ -79,8 +73,6 @@ import { CardComponent, JumbotronComponent } from '../layout';
 
 @NgModule({
     imports: [
-        // Primeng deps
-        // PRIMENG_DEPENDENCIES,
         // Material deps
         MATERIALNG_DEPENDENCIES
     ],
@@ -92,8 +84,6 @@ import { CardComponent, JumbotronComponent } from '../layout';
         JumbotronComponent,
         CardComponent,
         TranslateModule,
-        // Primeng deps
-        // PRIMENG_DEPENDENCIES,
         // Material deps
         MATERIALNG_DEPENDENCIES
     ]

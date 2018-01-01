@@ -38,6 +38,7 @@ nav.navbar {
     }
     
     .nav-right {
+        flex-direction: row;
         flex-grow: 1;
         justify-content: flex-end;
     }

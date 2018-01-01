@@ -1,0 +1,13 @@
+<div class="app-container">
+  <afd-navbar [isFixedTop]="true" (onChangeSidebar)="controlSidebar()"></afd-navbar>
+  <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width : '0%'"></afd-sidebar>
+  <div class="body" [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width : '0%'">
+    <div class="container-fluid">
+      <div class="col-md-12">
+          <router-outlet></router-outlet>
+          <!-- Routed views go here -->
+      </div>
+    </div>
+  </div>
+  <afd-footer></afd-footer> 
+</div>

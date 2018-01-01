@@ -1,12 +1,26 @@
+$sec_transition: .5s;
+
 .app-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+afd-sidebar {
+    .sidebar {
+        transition: width $sec_transition;
+        -webkit-transition: width $sec_transition;
+    }
+}
+
 .body {
     flex-grow: 1;
     background-color: #fff;
-    transition: all .6s;
-    -webkit-transition: all .6s;
+    transition: all $sec_transition;
+    -webkit-transition: all $sec_transition;
+}
+
+afd-footer {
+    transition: all $sec_transition;
+    -webkit-transition: all $sec_transition;
 }

@@ -1,12 +1,13 @@
 import { TranslateService } from '@ngx-translate/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BaseService } from './../../shared/services/base.service';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'afd-container',
   templateUrl: './container.component.html',
-  styleUrls: [ './container.component.scss' ]
+  styleUrls: [ './container.component.scss' ],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class ContainerComponent implements OnInit {

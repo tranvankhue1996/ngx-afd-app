@@ -5,10 +5,16 @@
   </div>
   <ul class="menu">
     <li>
-      <a href="#">ABC</a>
+        <a mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <mat-icon>dashboard</mat-icon>
+            <span>Products</span>
+          </a>
     </li>
     <li>
-      <a href="#">ABC</a>
+        <a mat-button routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <mat-icon>info</mat-icon>
+            <span>Info</span>
+          </a>
     </li>
   </ul>
 </div>

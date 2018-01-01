@@ -19,7 +19,10 @@ export class ContainerComponent implements OnInit {
       logo: 'logo.svg',
     },
     sidebar: {
-      width: '18%',
+      width: {
+        min: '70px',
+        max: '240px'
+      },
       height: 'calc(100vh - 60px)',
       isExpanded: true
     }

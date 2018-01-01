@@ -4,15 +4,11 @@
               [sizeHeight]="config.navbar.height"
               [imgLogo]="config.navbar.logo"
               (onChangeSidebar)="controlSidebar()"></afd-navbar>
-  <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width : '0%'"
+  <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width.max : config.sidebar.width.min"
               [sizeHeight]="config.sidebar.height"></afd-sidebar>
-  <div class="body" [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width : '0%'">
-    <div class="container-fluid">
-      <div class="col-md-12">
-          <router-outlet></router-outlet>
-          <!-- Routed views go here -->
-      </div>
-    </div>
+  <div class="body" [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width.max : config.sidebar.width.min">
+      <router-outlet></router-outlet>
+      <!-- Routed views go here -->
   </div>
-  <afd-footer [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width : '0%'"></afd-footer> 
+  <afd-footer [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width.max : config.sidebar.width.min"></afd-footer> 
 </div>

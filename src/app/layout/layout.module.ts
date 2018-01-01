@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import {
     NavbarComponent,
@@ -6,10 +7,12 @@ import {
     FooterComponent
 } from './index';
 import { SharedModule } from '../shared/shared.module';
+import { layoutRoutes } from './layout.routing';
 
 @NgModule({
     imports: [
-        SharedModule
+        SharedModule,
+        RouterModule.forChild(layoutRoutes)
     ],
     declarations: [
         NavbarComponent,

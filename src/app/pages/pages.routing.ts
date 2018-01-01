@@ -18,7 +18,11 @@ export const pagesRouting: Routes = [
         loadChildren: './about/about.module#AboutModule?sync=true'
     },
     {
+        path: '404',
+        loadChildren: './notfound/notfound.module#NotFoundModule?sync=true',
+    },
+    {
         path: '**',
-        loadChildren: './notfound/notfound.module#NotFoundModule?sync=true'
+        redirectTo: '404'
     }
 ];

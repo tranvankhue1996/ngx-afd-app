@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 
 export class SidebarComponent {
     @Input() isExpanded: Boolean = false;
-    @Input() sizeWidth: String = '';
+    @Input() sizeHeight: String = '0px';
+    @Input() sizeWidth: String = '0px';
 }

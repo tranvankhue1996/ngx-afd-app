@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg flex-column flex-md-row" [class.sticky-top]="isFixedTop">
+<nav class="navbar navbar-expand-lg flex-column flex-md-row"
+    [class.sticky-top]="isFixedTop"
+    [style.width]="sizeWidth"
+    [style.height]="sizeHeight">
   <div class="app-logo">
     <span class="nav-item">
       <a mat-icon-button href="javascript:void(0);" (click)="changeSidebar()">
@@ -7,7 +10,9 @@
     </span>
     <span class="logo nav-item">
       <a href="#">
-        <span class="img-logo"></span>
+        <span class="img-logo">
+            <img class="img-fluid" [src]="imgLogo">
+        </span>
       </a>
     </span>
   </div>

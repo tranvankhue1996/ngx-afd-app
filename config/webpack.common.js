@@ -85,7 +85,8 @@ module.exports = function (options) {
                 manifest: require(path.resolve('./dist/vendor.json')),
             }),
             new CopyWebpackPlugin([
-                { from: './src/favicon.ico', to: 'favicon.ico' }
+                { from: './src/favicon.ico', to: 'favicon.ico' },
+                { from: './src/content/images/logo.svg', to: 'logo.svg' }
             ]),
             new CopyWebpackPlugin([
                 {

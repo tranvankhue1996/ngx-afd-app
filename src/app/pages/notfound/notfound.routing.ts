@@ -10,7 +10,6 @@ export const routesNotFound: Routes = [
                 component: NotFoundComponent,
                 data: { title: 'Not Found' }
             }
-        ],
-        pathMatch: 'full'
+        ]
     }
 ];

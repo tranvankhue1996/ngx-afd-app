@@ -12,8 +12,14 @@ import * as $ from 'jquery';
 export class ContainerComponent implements OnInit {
 
   config: any = {
+    navbar: {
+      width: '100vw',
+      height: '60px',
+      logo: 'logo.svg',
+    },
     sidebar: {
       width: '18%',
+      height: 'calc(100vh - 60px)',
       isExpanded: true
     }
   };

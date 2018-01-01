@@ -1,6 +1,11 @@
 <div class="app-container">
-  <afd-navbar [isFixedTop]="true" (onChangeSidebar)="controlSidebar()"></afd-navbar>
-  <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width : '0%'"></afd-sidebar>
+  <afd-navbar [isFixedTop]="true"
+              [sizeWidth]="config.navbar.width"
+              [sizeHeight]="config.navbar.height"
+              [imgLogo]="config.navbar.logo"
+              (onChangeSidebar)="controlSidebar()"></afd-navbar>
+  <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width : '0%'"
+              [sizeHeight]="config.sidebar.height"></afd-sidebar>
   <div class="body" [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width : '0%'">
     <div class="container-fluid">
       <div class="col-md-12">

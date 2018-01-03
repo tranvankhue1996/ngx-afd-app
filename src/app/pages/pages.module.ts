@@ -12,7 +12,7 @@ import {
 
 import { LayoutModule } from '../layout/layout.module';
 import { BaseService } from '../shared/services/base.service';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy } from '@angular/common';
 
 @NgModule({
     imports: [

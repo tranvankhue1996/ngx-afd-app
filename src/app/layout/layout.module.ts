@@ -7,12 +7,11 @@ import {
     FooterComponent
 } from './index';
 import { SharedModule } from '../shared/shared.module';
-import { layoutRoutes } from './layout.routing';
 
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forChild(layoutRoutes)
+        RouterModule.forChild([])
     ],
     declarations: [
         NavbarComponent,

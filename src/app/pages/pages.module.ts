@@ -12,19 +12,21 @@ import {
 
 import { LayoutModule } from '../layout/layout.module';
 import { BaseService } from '../shared/services/base.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
     imports: [
         HttpModule,
         FormsModule,
         LayoutModule,
-        RouterModule.forRoot(pagesRouting, { useHash: true })
+        RouterModule.forRoot(pagesRouting)
     ],
     declarations: [
         ContainerComponent,
         HomeComponent
     ],
     providers: [
+        {provide: HashLocationStrategy, useClass: HashLocationStrategy},
         Title,
         BaseService
     ],

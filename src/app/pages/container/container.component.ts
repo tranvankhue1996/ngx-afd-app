@@ -20,7 +20,7 @@ export class ContainerComponent implements OnInit {
     },
     sidebar: {
       width: {
-        min: '70px',
+        min: '0',
         max: '240px'
       },
       height: 'calc(100vh - 60px)',

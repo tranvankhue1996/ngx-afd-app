@@ -10,10 +10,7 @@ module.exports = {
             '@angular/http',
             '@angular/platform-browser',
             '@angular/platform-browser-dynamic',
-            '@angular/router',
-            'jquery',
-            'rxjs',
-            'bootstrap'
+            '@angular/router'
         ]
     },
     resolve: {
@@ -24,8 +21,8 @@ module.exports = {
         exprContextCritical: false,
         rules: [
             {
-                test: /(vendor\.css|global\.css)/,
-                loaders: ['style-loader', 'css-loader?sourceMap']
+                test: /(.scss)/,
+                loaders: ['to-string-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot)$/i,

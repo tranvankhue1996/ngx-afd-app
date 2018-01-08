@@ -24,7 +24,7 @@ export class ContainerComponent implements OnInit {
         max: '240px'
       },
       height: 'calc(100vh - 60px)',
-      isExpanded: true
+      isExpanded: false
     }
   };
 

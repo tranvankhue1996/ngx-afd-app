@@ -1,12 +1,18 @@
-<section id="services">
-    <h1 class="h1-responsive">Services</h1>
-    <mat-icon>home</mat-icon>
-    <mat-menu #appMenu="matMenu">
-        <button mat-menu-item> Settings </button>
-        <button mat-menu-item> Help </button>
-      </mat-menu>
-      
-      <button mat-icon-button [matMenuTriggerFor]="appMenu">
-         <mat-icon>more_vert</mat-icon>
-      </button>
+<section id="home">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="grid-box" [style.height]="'100vh'" [style.background-color]="'green'">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="grid-box" [style.height]="'100vh'" [style.background-color]="'orange'">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="grid-box" [style.height]="'100vh'" [style.background-color]="'blue'">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

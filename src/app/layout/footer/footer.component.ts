@@ -1,5 +1,5 @@
 import { Constants } from './../../shared/constants/constants';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'afd-footer',
@@ -8,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FooterComponent implements OnInit {
-    year: number = 0;
-    constants = Constants;
+    year: Number = 0;
+    @Input() backgroundColor: String = '#fff';
+    @Input() color: String = '#000';
+    @Input() companyName: String = 'CompanyABC';
+    @Input() companyLink: String = 'companyabc.com';
 
     ngOnInit() {
         let d = new Date();
-        this.year = d.getFullYear(); 
+        this.year = d.getFullYear();
     }
 }

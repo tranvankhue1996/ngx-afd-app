@@ -10,6 +10,8 @@ export class NavbarComponent {
     @Input() isFixedTop: Boolean = false;
     @Input() sizeHeight: String = '0px';
     @Input() sizeWidth: String = '0px';
+    @Input() backgroundColor: String = '#fff';
+    @Input() color: String = '#000';
     @Input() imgLogo: String = '';
     @Output() onChangeSidebar: EventEmitter<any> = new EventEmitter<any>();
 

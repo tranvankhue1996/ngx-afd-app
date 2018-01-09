@@ -14,8 +14,10 @@ export class ContainerComponent implements OnInit {
 
   config: any = {
     navbar: {
-      width: '100vw',
+      width: '100%',
       height: '60px',
+      backgroundColor: '#fff',
+      color: '#26A69A',
       logo: 'logo.svg',
     },
     sidebar: {
@@ -25,6 +27,12 @@ export class ContainerComponent implements OnInit {
       },
       height: 'calc(100vh - 60px)',
       isExpanded: false
+    },
+    footer: {
+      backgroundColor: '#fff',
+      color: '#26A69A',
+      companyName: 'Afd Media',
+      companyLink: 'https://afd-company.com'
     }
   };
 

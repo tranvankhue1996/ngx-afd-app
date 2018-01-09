@@ -2,10 +2,7 @@ nav.navbar {
     z-index: 100;
     display: flex !important;
     flex-direction: row !important;
-    color: #fff;
     overflow: hidden;
-    background-color: #004D40;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 
     .app-logo {
         display: inline-flex;
@@ -28,11 +25,10 @@ nav.navbar {
 
     .nav-item {
         border-radius: 50%;
-        color: #26A69A;
 
         a {
             &:hover {
-                color: #fff;
+                color: #000;
             }
         }
     }

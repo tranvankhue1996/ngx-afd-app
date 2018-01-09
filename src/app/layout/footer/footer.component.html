@@ -1,7 +1,8 @@
-<div class="footer-copyright">
-  <div class="container-fluid">
+<div class="footer-copyright" 
+    [style.background-color]="backgroundColor"
+    [style.color]="color">
+  <div class="container">
     © {{year}} Copyright
-    <a [href]="constants.CONFIG.AFD.LINK" [innerHTML]="constants.CONFIG.AFD.NAME"></a>
-
+    <a [href]="companyLink" [innerHTML]="companyName"></a>
   </div>
 </div>

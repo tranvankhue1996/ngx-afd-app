@@ -1,7 +1,12 @@
 section {
-    margin: 15px 5px;
+    margin: 15px 0;
+
+    .grid-container {
+        padding: 0 2.5px;
+    }
 
     .grid-box {
         margin: 5px;
+        border: 1px solid brown;
     }
 }

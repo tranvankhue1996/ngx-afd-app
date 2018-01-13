@@ -23,6 +23,11 @@ afd-sidebar {
     overflow: auto;
     transition: all $sec_transition;
     -webkit-transition: all $sec_transition;
+
+    .render {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 afd-footer {

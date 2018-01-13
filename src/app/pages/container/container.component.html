@@ -8,10 +8,11 @@
               (onChangeSidebar)="controlSidebar()"></afd-navbar>
 
   <afd-sidebar [sizeWidth]="config.sidebar.isExpanded ? config.sidebar.width.max : config.sidebar.width.min"
-              [sizeHeight]="config.sidebar.height"></afd-sidebar>
+              [sizeHeight]="config.sidebar.height"
+              [listItem]="config.sidebar.listItem"></afd-sidebar>
 
   <div class="body" [style.margin-left]="config.sidebar.isExpanded ? config.sidebar.width.max : config.sidebar.width.min">
-        <div class="container">
+        <div class="container render">
             <router-outlet></router-outlet>
             <!-- Routed views go here -->
         </div>  

@@ -4,16 +4,12 @@
   <div class="header">
   </div>
   <ul class="menu">
-    <li>
-        <a mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <mat-icon>dashboard</mat-icon>
-            <span>Products</span>
-          </a>
-    </li>
-    <li>
-        <a mat-button routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <mat-icon>info</mat-icon>
-            <span>Info</span>
+    <li *ngFor="let item of listItem">
+        <a mat-button [routerLink]="item.link" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }">
+            <mat-icon>{{item.icon}}</mat-icon>
+            <span>{{item.name}}</span>
           </a>
     </li>
   </ul>

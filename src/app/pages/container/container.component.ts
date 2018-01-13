@@ -2,6 +2,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BaseService } from './../../shared/services/base.service';
 import * as $ from 'jquery';
+import { SidebarModel } from '../../layout/sidebar/sidebar.model';
 
 @Component({
   selector: 'afd-container',
@@ -26,7 +27,12 @@ export class ContainerComponent implements OnInit {
         max: '240px'
       },
       height: 'calc(100vh - 60px)',
-      isExpanded: false
+      isExpanded: false,
+      listItem: [
+        new SidebarModel('/products', 'dashboard', 'Product'),
+        new SidebarModel('/about', 'info', 'Info'),
+        new SidebarModel('/test', 'note', 'Test'),
+      ]
     },
     footer: {
       backgroundColor: '#fff',

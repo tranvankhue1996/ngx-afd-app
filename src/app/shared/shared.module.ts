@@ -70,9 +70,11 @@ const MATERIALNG_DEPENDENCIES = [
 ];
 
 import { CardComponent, JumbotronComponent } from '../layout';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
+        CommonModule,
         // Material deps
         MATERIALNG_DEPENDENCIES
     ],
@@ -81,6 +83,7 @@ import { CardComponent, JumbotronComponent } from '../layout';
         CardComponent
     ],
     exports: [
+        CommonModule,
         JumbotronComponent,
         CardComponent,
         TranslateModule,
